@@ -36,15 +36,12 @@ interface URL {
     toJSON(): string;
 }
 
-declare var URL: {
+var URL: {
     prototype: URL;
     new(url: string | URL, base?: string | URL): URL;
     createObjectURL(object: any): string;
     revokeObjectURL(url: string): void;
 };
-
-type webkitURL = URL;
-declare var webkitURL: typeof URL;
 
 interface URLSearchParams {
     /**
@@ -79,10 +76,10 @@ interface URLSearchParams {
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
 }
 
-declare var URLSearchParams: {
+var URLSearchParams: {
     prototype: URLSearchParams;
     new(init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
     toString(): string;
 };
 
-};
+}
